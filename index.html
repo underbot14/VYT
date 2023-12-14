@@ -617,27 +617,7 @@
 <script src="js/es5-shims.min.js"></script>
 <script src="js/share.js"></script>
 <!--код карты-->
-<script type="text/javascript">
-	var mapOptions = {
-		center : [62.04524421835813,129.68644949999995],
-		zoom: 11
-	}
-
-	var map = new L.map('map', mapOptions);
-	var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-	map.addLayer(layer);
-
-	var marker = new L.marker([62.03266406124629, 129.74994649999985]);
-	var marker2 = new L.marker([62.33497691674746, 129.64200499999984]);
-
-	marker.bindPopup('IT PARK').openPopup();
-	
-	marker.addTo(map);
-	marker2.addTo(map);
-
-	
-
-</script>
+<script src="js/map.js"></script>
 <!--код карты-->
 
 
