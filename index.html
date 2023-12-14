@@ -1,0 +1,647 @@
+<!DOCTYPE html><html lang="ru"><head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, minimum-scale=1, user-scalable=yes, viewport-fit=cover">
+    <title>VISIT YAKUTIA</title>
+
+	<!---<meta name="description" content="VISIT YAKUTIA">
+	<meta name="keywords" content="VISIT YAKUTIA">
+
+	<meta property="og:title" content="VISIT YAKUTIA">
+		<meta property="og:url" content="https://visit-yakutia.com/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="VISIT YAKUTIA">
+	<meta property="og:description" content="VISIT YAKUTIA">
+	<meta property="og:image" content="images/cover.jpg">--->
+
+	<link rel="stylesheet" href="css/app.css">
+
+	<link rel="icon" type="image/x-icon" href="images/faviconV2.jpg">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&amp;display=swap" rel="stylesheet">
+	<link rel="canonical" href="https://visit-yakutia.com/">
+
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+	
+
+</head>
+<body>
+	<header>
+		<div class="wrap">
+			<div class="top">
+				<span></span>
+				<div class="items">
+					<div class="link-btns">
+						
+							<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="">
+								
+							</svg>
+						</a>
+						
+							<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="">
+								
+							</svg>
+						</a>
+					</div>
+					<nav>
+						<!---<a href="/about/">О Якутии</a>
+						<a href="/news/">Новости</a>
+						<a href="/map/">Карта</a>
+					</nav>
+					<a href="/special/" class="special"><img src="images/special.svg" class="white"><img src="images/special_black.svg" class="black"></a>
+					<div class="socials">
+						<a href="https://vk.com/yoursouthural" target="_blank"><img src="images/vk.svg" class="white" alt="Вконтакте"><img src="images/vk_black.svg" class="black" alt="Вконтакте"></a>
+ 						<a href="https://ok.ru/yoursouthural" target="_blank"><img src="/local/templates/chel/img/ok.svg" class="white" alt="Одноклассники"><img src="/local/templates/chel/img/ok_black.svg" class="black" alt="Одноклассники"></a> -->
+						<!---<a href="https://t.me/cheltravel" target="_blank"><img src="images/tg_header.svg" class="white"></a>
+					</div>--->
+					<!---<div class="langs">
+						<span>RU</span>
+						<img src="images/dd.svg" class="white"><img src="images/dd_black.svg" class="black" alt="Выбор языка">
+						<div class="dd_langs">
+							<a href="/en/">EN</a>
+						</div>
+					</div>--->
+				</div>
+			</div>
+			<div class="bottom">
+				<a href="/"><img src="images/Frame270.svg" alt="Туристический портал Челябинской области, заказ туров, актуальные события, полезная информация для туристов" class="logo white">
+					<img src="images/Frame270.svg" alt="Туристический портал Челябинской области, заказ туров, актуальные события, полезная информация для туристов" class="logo black"></a>
+				<div class="items">
+					<nav>
+						<a href="/rest.hmtl/">Отдых
+							<img src="images/dd.svg" class="white"></a>
+						<a href="/about.html">О Якутии</a>
+						<a href="/tours.html/">Туры</a>
+						<a href="/news.html/">Новости</a>
+						<a href="/map.html/">Интерактивная карта</a>
+						<img src="images/search.svg" alt="Поиск" class="white" onclick="openSearch();"><img src="images/search_black.svg" class="black" onclick="openSearch();">
+					</nav>
+					<img src="images/burger.svg" alt="Меню" class="mobile burger">
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="fixed_header">
+		<a class="blue burger"><img src="images/burger_white.svg" alt="Меню"></a>
+		<a class="green"><img src="images/search.svg" onclick="openSearch();" alt="Поиск"></a>
+	</div>
+	<div class="menu_overlay">
+		<div class="wrap">
+			<div class="top">
+				<img src="images/Frame270.svg" class="logo" alt="Туристический портал Челябинской области, заказ туров, актуальные события, полезная информация для туристов">
+				<img src="images/close.svg" class="close" alt="Закрыть">
+			</div>
+			<div class="menu_big">
+				<a href="/sights/">ЧТО ПОСМОТРЕТЬ</a>
+				<a href="/activities/">ЧЕМ ЗАНЯТЬСЯ</a>
+				<a href="/events/">СОБЫТИЯ</a>
+				<a href="/routes/">МАРШРУТЫ</a>
+				<a href="/tours/">ТУРЫ</a>
+				<a href="/for_tourist/">ТУРИСТУ</a>
+				<a class="dumb"></a><a class="dumb"></a>
+			</div>
+			<div class="menu_small">
+				<a href="/about/">О Якутии</a>
+				<a href="/news/">Новости</a>
+				<a href="/map/">Карта</a>
+				<a class="dumb"></a>
+				<a href="/en/">EN</a>
+				<a class="dumb"></a><a class="dumb"></a>
+			</div>
+			<div class="link-btns">
+				<a href="/tours/chelyabinsk-k-nam-priletayut-dazhe-meteority/" class="link-btn">Брендовый маршрут
+					<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M13 5L9 1M13 5L9 9M13 5H1" stroke="white" stroke-linecap="round"></path>
+					</svg>
+				</a>
+				<a href="https://investregion74.ru" class="link-btn">Инвесторам
+					<svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M13 5L9 1M13 5L9 9M13 5H1" stroke="white" stroke-linecap="round"></path>
+					</svg>
+				</a>
+			</div>
+			<div class="socials">
+				<!-- <a href="https://www.facebook.com/yoursouthural" target="_blank"><img src="/local/templates/chel/img/fb.svg" class="white" alt="Facebook"><img src="/local/templates/chel/img/fb_black.svg" class="black" alt="Facebook"></a> -->
+				<a href="https://vk.com/visit_yakutia_official" target="_blank">
+					<img src="images/vk.svg" class="white" alt="Вконтакте">
+					<!-- <img src="/local/templates/chel/img/vk_black.svg" class="black" alt="Вконтакте"> -->
+				</a>
+				<!-- <a href="https://www.instagram.com/yoursouthural/" target="_blank"><img src="/local/templates/chel/img/ig.svg" class="white" alt="Instagram"><img src="/local/templates/chel/img/ig_black.svg" class="black" alt="Instagram"></a> -->
+<!--
+				<a href="https://ok.ru/yoursouthural" target="_blank">
+					<img src="/local/templates/chel/img/ok.svg" class="white" alt="Одноклассники">
+					<img src="/local/templates/chel/img/ok_black.svg" class="black" alt="Одноклассники">
+				</a>
+-->
+				<a href="https://t.me/artitmnews" target="_blank">
+					<img src="images/tg_header.svg" class="white" alt="Телеграм">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="search_overlay">
+		<div class="wrap">
+			<img src="images/close.svg" class="close" alt="Закрыть">
+			<form action="/search/" method="post" id="searchForm">
+				<input type="text" name="q" placeholder="Что вы ищете?">
+				<img src="images/search_icon.svg" onclick="startSearch();" alt="Поиск">
+			</form>
+		</div>
+	</div><div class="index_video">
+	<video muted="" loop="" autoplay="" playsinline="">
+		<source src="media/index_2.mp4" type="video/mp4">
+	</video>
+	<div class="shadow"></div>
+	<div class="headlines">
+		<div class="wrap">
+			<p style="text-align: center;">
+				<img src="images/center.png">
+		  </p>
+		</div>
+	</div>
+	<img src="images/arrow.svg" class="arrow">
+</div>
+</div>
+<a href="./about.html" class="index_about">
+	<div class="left">
+		<span class="title-block">О Якутии</span>
+		<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤЯкутия – самый большой и самый холодный регион России. Именно здесь находится Полюс холода Северного полушария – район земли с самой низкой зарегистрированной температурой, где постоянно проживают люди. Климат резко континентальный, с длинной зимой (отрицательная температура держится от 6 до 8 месяцев) и коротким летом, амплитуда колебаний температуры воздуха превышает 100 градусов по Цельсию. С другой стороны, Якутия – теплый, дружелюбный край, жители которого всегда рады встрече с гостями.</p>
+		<br>
+		<br>
+		<span class="more">Показать больше...</span>
+		<br>
+		<br>
+		<br>
+	</div>
+	<div class="right"></div>
+</a>
+<div class="wrap">
+	<a href="/activities/" class="title">Календарь событий</a>
+</div>
+<div class="wrap masonry masonry_4x4 no-padding masonry-index_activities">
+	<div class="h-divider"></div>
+	<a href="/activities/gornye-lyzhi-i-snoubord/" class="item">
+	<div class="img" style="background: url('images/Frame61.jpg')lightgray 50% / cover no-repeat;;"></div>
+	<div class="bg">
+		<div class="name">
+			<span>Рок-фестиваль HOLBON FEST!</span>
+			
+		</div>
+	</div>
+</a>
+<div class="v-divider"></div><a href="/activities/pokhody-po-goram-chelyabinskoy-oblasti/" class="item">
+	<div class="img" style="background: url('images/Frame61.jpg')lightgray 50% / cover no-repeat;;"></div>
+	<div class="bg">
+		<div class="name">
+			<span>Рок-фестиваль HOLBON FEST!</span>
+			
+		</div>
+	</div>
+</a>
+<div class="v-divider"></div><a href="/activities/semeynyy-otdykh/" class="item">
+	<div class="img" style="background: url('images/Frame61.jpg')lightgray 50% / cover no-repeat;;"></div>
+	<div class="bg">
+		<div class="name">
+			<span>Рок-фестиваль HOLBON FEST!</span>
+			
+		</div>
+	</div>
+</a>
+<div class="v-divider"></div><a href="/activities/zimniy-otdykh-v-chelyabinskoy-oblasti-/" class="item">
+	<div class="img" style="background: url('images/Frame61.jpg') lightgray 50% / cover no-repeat;;"></div>
+	<div class="bg">
+		<div class="name">
+			<span>Рок-фестиваль HOLBON FEST!</span>
+			<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="28.0001" cy="28" r="27"></circle>
+			<path d="M40.0001 28L32.0001 20M40.0001 28L32.0001 36M40.0001 28H16.0001" stroke-linecap="round"></path>
+			</svg>
+		</div>
+	</div>
+</a>
+
+</div>
+<br>
+<div class="wrap to-end">
+	<div class="morelink">
+		<a href="/activities/">Все активности</a>
+	</div>
+</div>
+<div class="dark_bg index_sights">
+	<div class="wrap">
+		<a href="/sights/" class="title">Чем заняться?</a>
+	</div>
+	<div class="wrap masonry masonry_4x4 tours no-padding masonry-index_sights">
+		<div class="h-divider"></div>
+			<a href="/sights/v-gosti-k-losyam-i-medvedyam/" class="item_wide">
+		<div class="left">
+			<div class="img" style="background: url('images/snowboard.jpg');"></div>
+			<span>Сноубординг</span>
+		</div>
+		<div class="right">
+			<span>Сноубординг</span>
+			<p>11-14 января</p>
+			<span class="link">Узнать больше</span>
+		</div>
+	</a>
+		<div class="v-divider"><i></i></div>
+	<a href="/sights/arkaim-mesto-sily-yuzhnogo-urala/" class="item">
+		<div class="img" style="background: url('images/splav.jpg');"></div>
+		<span>Сплавы по рекам</span>
+	</a>
+	<div class="v-divider"><i></i></div>
+	<a href="/sights/na-volnakh-kamennoy-reki/" class="item">
+		<div class="img" style="background: url('images/001.jpg');"></div>
+		<span>Промышленные экскурсии</span>
+	</a>
+		<div class="h-divider"></div>
+	</div>
+	<div class="wrap to-end">
+		<div class="morelink">
+			<a href="/sights/">Все активности</a>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<a href="/events/" class="title">Что посмотреть</a>
+</div>
+<div class="wrap masonry masonry_4x4 events no-padding">
+	<div class="h-divider"></div>
+	<a href="/events/proekt-vremya-lda-istoriya-figurnogo-kataniya-v-rossii/" class="item">
+	<div class="img" style="background: url('images/lenskie.jpg');"></div>
+	<div class="bg">
+		<div class="info">
+			<span class="ename">Ленские столбы</span>
+			<div class="place_and_type">
+				<span>Выставка</span>
+				<span>—</span>
+				<img src="images/pin_gray.svg">
+				<span>Якутск</span>
+			</div>
+		</div>
+		<div class="name">
+			<span>14.12-04.02</span>
+			
+		</div>
+	</div>
+</a>
+<div class="v-divider"><i></i></div><a href="/events/uralskie-pelmeni-na-nikolu-zimnego/" class="item">
+	<div class="img" style="background: url('images/lenskie.jpg');"></div>
+	<div class="bg">
+		<div class="info">
+			<span class="ename">Ленские столбы</span>
+			<div class="place_and_type">
+				<span>Фестиваль</span>
+				<span>—</span>
+				<img src="images/pin_gray.svg">
+				<span>Якутск</span>
+			</div>
+		</div>
+		<div class="name">
+			<span>16.12</span>
+			
+		</div>
+	</div>
+</a>
+<div class="v-divider"><i></i></div><a href="/events/chempionat-rossii-po-figurnomu-kataniyu-2024/" class="item">
+	<div class="img" style="background: url('images/lenskie.jpg');"></div>
+	<div class="bg">
+		<div class="info">
+			<span class="ename">Ленские столбы</span>
+			<div class="place_and_type">
+				<span>Спорт</span>
+				<span>—</span>
+				<img src="images/pin_gray.svg">
+				<span>Якутск</span>
+			</div>
+		</div>
+		<div class="name">
+			<span>21.12-24.12</span>
+			<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="28.0001" cy="28" r="27"></circle>
+			<path d="M40.0001 28L32.0001 20M40.0001 28L32.0001 36M40.0001 28H16.0001" stroke-linecap="round"></path>
+			</svg>
+		</div>
+	</div>
+</a>
+<div class="v-divider"><i></i></div><a href="/events/vserossiyskaya-spartakiada-2024/" class="item">
+	<div class="img" style="background: url('images/lenskie.jpg');"></div>
+	<div class="bg">
+		<div class="info">
+			<span class="ename">Ленские столбы</span>
+			<div class="place_and_type">
+				<span>Спорт</span>
+				<span>—</span>
+				<img src="images/pin_gray.svg">
+				<span>Якутск</span>
+			</div>
+		</div>
+		<div class="name">
+			<span>09.02-18.02</span>
+			<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="28.0001" cy="28" r="27"></circle>
+			<path d="M40.0001 28L32.0001 20M40.0001 28L32.0001 36M40.0001 28H16.0001" stroke-linecap="round"></path>
+			</svg>
+		</div>
+	</div>
+</a>
+	<div class="h-divider"></div>
+</div>
+<div class="wrap to-end">
+	<div class="morelink">
+		<a href="/events/">Все события</a>
+	</div>
+</div>
+<div class="block map_block_bg">
+	<div class="wrap">
+		<span class="title">Карта региона</span>
+	</div>
+</div>
+
+<!--БЛОК КАРТЫ                                                                                   -->
+
+<div class="map_block_bg dyn_map">
+	<div id="map" class="map_ll"></div>
+</div>
+<!--		                                                                                     -->
+
+<div class="dark_bg">
+	<div class="wrap">
+		<a href="/tours/" class="title">Туры</a>
+	</div>
+	<div class="wrap masonry masonry_4x4 tours no-padding">
+		<div class="h-divider"></div>
+		<a href="/tours/zimnyaya-skazka-np-taganay-np-zyuratkul/" class="item">
+	<div class="img" style="background: url('images/Default.jpg');"></div>
+	<div class="bg black">
+		<div class="info">
+			<span class="ename">БУЛУУС КУРУЛУУР</span>
+			<div class="place_and_type">
+				<span>Комбинированный</span>
+				<div class="dot"></div>
+				<span>1 день</span>
+			</div>
+			<div class="stars">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+											</div>
+		</div>
+		<div class="name">
+			<span>22600 <span class="rouble">₽</span></span>
+			<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="28.0001" cy="28" r="27"></circle>
+			<path d="M40.0001 28L32.0001 20M40.0001 28L32.0001 36M40.0001 28H16.0001" stroke-linecap="round"></path>
+			</svg>
+		</div>
+	</div>
+</a>
+<div class="v-divider"><i></i></div><a href="/tours/zimnyaya-skazka-na-khrebte-urenga/" class="item">
+	<div class="img" style="background: url('images/Default.jpg');"></div>
+	<div class="bg black">
+		<div class="info">
+			<span class="ename">БУЛУУС КУРУЛУУР</span>
+			<div class="place_and_type">
+				<span>Активный отдых</span>
+				<div class="dot"></div>
+				<span>1 день</span>
+			</div>
+			<div class="stars">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+											</div>
+		</div>
+		<div class="name">
+			<span>2200 <span class="rouble">₽</span></span>
+			<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="28.0001" cy="28" r="27"></circle>
+			<path d="M40.0001 28L32.0001 20M40.0001 28L32.0001 36M40.0001 28H16.0001" stroke-linecap="round"></path>
+			</svg>
+		</div>
+	</div>
+</a>
+<div class="v-divider"><i></i></div><a href="/tours/chelyabinsk-k-nam-priletayut-dazhe-meteority/" class="item">
+	<div class="img" style="background: url('images/Default.jpg');"></div>
+	<div class="bg black">
+		<div class="info">
+			<span class="ename">БУЛУУС КУРУЛУУР</span>
+			<div class="place_and_type">
+				<span>Культурно-познавательный</span>
+				<div class="dot"></div>
+				<span>3-7 дней</span>
+			</div>
+			<div class="stars">
+												<img src="images/star_empty.svg">
+								<img src="images/star_empty.svg">
+								<img src="images/star_empty.svg">
+								<img src="images/star_empty.svg">
+								<img src="images/star_empty.svg">
+							</div>
+		</div>
+		<div class="name">
+			<span>16950 <span class="rouble">₽</span></span>
+			<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="28.0001" cy="28" r="27"></circle>
+			<path d="M40.0001 28L32.0001 20M40.0001 28L32.0001 36M40.0001 28H16.0001" stroke-linecap="round"></path>
+			</svg>
+		</div>
+	</div>
+</a>
+<div class="v-divider"><i></i></div><a href="/tours/zimnee-semeynoe-puteshestvie-yuzhnyy-ural-obnimaya-snezhnostyu-/" class="item">
+	<div class="img" style="background: url('images/Default.jpg');"></div>
+	<div class="bg black">
+		<div class="info">
+			<span class="ename">БУЛУУС КУРУЛУУР</span>
+			<div class="place_and_type">
+				<span>Комбинированный</span>
+				<div class="dot"></div>
+				<span>3-7 дней</span>
+			</div>
+			<div class="stars">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+								<img src="images/star.svg">
+											</div>
+		</div>
+		<div class="name">
+			<span>24700 <span class="rouble">₽</span></span>
+			<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="28.0001" cy="28" r="27"></circle>
+			<path d="M40.0001 28L32.0001 20M40.0001 28L32.0001 36M40.0001 28H16.0001" stroke-linecap="round"></path>
+			</svg>
+		</div>
+	</div>
+</a>
+		<div class="h-divider"></div>
+	</div>
+	<div class="wrap to-end">
+		<div class="morelink">
+			<a href="/tours/">Все туры</a>
+		</div>
+	</div>
+</div>
+<!---<div class="marquee stories">
+	<div class="track">
+	<div class="content">А <img src="images/stories_divider.svg"> "></div>  </div>--->
+	</div>
+<div class="index_stories">
+			<a href="/routes/puteshestvie-za-luchshimi-selfi/" class="row">
+		<div class="text">
+			<span class="story_name">Путешествие за лучшими селфи</span>
+			<p>Я был на Оймяконе, это самый холодный клочок земли, что мне приходилось видеть.
+				Я всегда мечтал побывать в Сибири. Это было великолепно.</p>
+			<span class="more">Читать</span>
+			<div class="author">
+				<div class="photo" style="background: url('images/hardicrash.png');"></div>
+				<div class="info">
+					<span class="name">Том Харди</span>
+					<span class="position">Краш Актер</span>
+				</div>
+			</div>
+		</div>
+		<div class="img" style="background: url('images/0df31a8b60dccb427fe2c99fced90d33.jpg');"></div>
+	</a>
+		<a href="/routes/tsentr-uralskogo-strit-arta/" class="row reverse">
+		<div class="img" style="background: url('images/d60b2c70480bed350e97a19f770d0d52.JPG');"></div>
+		<div class="text bg black">
+			<span class="story_name">Город для людей</span>
+			<p>Я был на Оймяконе, это самый холодный клочок земли, что мне приходилось видеть.
+				Я всегда мечтал побывать в Сибири. Это было великолепно.</p>
+			<span class="more">Читать</span>
+			<div class="author">
+				<div class="photo" style="background: url('images/hardicrash.png');"></div>
+				<div class="info">
+					<span class="name">Том Харди</span>
+					<span class="position">Краш Актер</span>
+				</div>
+			</div>
+		</div>
+	</a>
+			<a href="/routes/traditsii-oruzheynogo-dela/" class="row">
+		<div class="text">
+			<span class="story_name">Традиции оружейного дела</span>
+			<p>Я был на Оймяконе, это самый холодный клочок земли, что мне приходилось видеть.
+				Я всегда мечтал побывать в Сибири. Это было великолепно.</p>
+			<span class="more">Читать</span>
+			<div class="author">
+				<div class="photo" style="background: url('images/hardicrash.png');"></div>
+				<div class="info">
+					<span class="name">Том Харди</span>
+					<span class="position">Краш Актер </span>
+				</div>
+			</div>
+		</div>
+		<div class="img" style="background: url('images/ec99ed82e9a1fce242adda3f6c34b267.jpg');"></div>
+	</a>
+</div>
+<!--<div class="wrap insta_title">
+	<a class="title">Южный Урал в Instagram</a>
+	<a class="subtitle">Путешествуй по Челябинской области с нами<br>Наш хэштег #ТвойЮжныйУрал</a>
+</div>
+<div class="elfsight-app-d35b200a-def1-49c5-860f-20934b9e4e19"></div>-->
+<!--  
+<div id="js-flowbox-flow"></div>
+ -->
+	<footer>
+		<div class="wrap">
+			<div class="col">
+				<a href="/"><img src="images/Frame270.svg" class="logo"></a>
+				<div class="socials">
+					<!--<a href="https://www.facebook.com/yoursouthural" target="_blank"><img src="/local/templates/chel/img/fb_footer.svg"></a>-->
+					<a href="https://vk.com/visit_yakutia_official" target="_blank"><img src="images/vk_footer.svg"></a>
+					<!--<a href="https://www.instagram.com/yoursouthural/" target="_blank"><img src="/local/templates/chel/img/ig_footer.svg"></a>-->
+<!-- 					<a href="https://ok.ru/yoursouthural" target="_blank"><img src="/local/templates/chel/img/ok_footer.svg"></a> -->
+<!-- 					<a href="https://ok.ru/yoursouthural" target="_blank"><img src="/local/templates/chel/img/ok_footer.svg"></a> -->
+					<a href="https://t.me/artitmnews" target="_blank"><img src="images/tg_footer.svg"></a>
+					
+				</div>
+			</div>
+			<div class="col">
+				<span>Разделы сайта</span>
+				<div class="links">
+					<a href="/sights/">Что посмотреть</a>
+					<a href="/activities/">Чем заняться</a>
+					<a href="/events/">События</a>
+					<a href="/routes/">Маршруты</a>
+					<a href="/tours/">Туры</a>
+					<a href="/for_tourist/">Туристу</a>					
+					<a href="/about/">О регионе</a>
+					<a href="/news/">Новости</a>
+					<a href="/map/">Карта</a>
+					<a href="/audio/">Аудиогиды</a>
+				</div>
+			</div>
+			<div class="col col3">
+				<span>Контакты</span>
+				<p>ГАУ РС(Я) «Агентство развития туризма и территориального маркетинга».</p>
+				<!--<p>www.ica74.com</p>-->
+				<a class="icon_address">г.Якутск ул. Орджоникидзе 36/1 офис 306, 304</a>
+				<a href="tel:+74112251126" class="icon_phone">+7 (4112) 25-11-26</a>
+				<a href="mailto:contact@visit-yakutia.com" class="icon_email">contact@visit-yakutia.com</a>
+				<span class="how-add-portal__title">Как добавить на портал</span>
+				<div class="how-add-portal">
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSefGQqNKaXshzm6-L32-8WSCCccUepWQFFERi7RzYrd-5PwgA/viewform" target="_blank">Гостиницу или базу отдыха</a>
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSeJc2VfcYf6iJwBFtcgxUuGWu8TIq4_HMcG_wyPVuEKxy0vGw/viewform" target="_blank">Предприятие общепита</a>
+				</div>
+				<p class="copyright">Сделано в <a href="https://viinteg.ru/">VIINTEG</a></p>
+			</div>
+		</div>
+	</footer>
+							<!-- Yandex.Metrika counter  <noscript><div><img src="https://mc.yandex.ru/watch/70648294" style="position:absolute; left:-9999px;" alt="" /></div></noscript>  /Yandex.Metrika counter -->
+<script async="" src="js/tag.js"></script><script src="js/platform.js" defer=""></script>
+<script id="flowbox-js-embed" async="" src="js/flowbox.js"></script><script>
+  (function(d, id) {
+    if (!window.flowbox) { var f = function () { f.q.push(arguments); }; f.q = []; window.flowbox = f; }
+    if (d.getElementById(id)) {return;}
+    var s = d.createElement('script'), fjs = d.scripts[d.scripts.length - 1]; s.id = id; s.async = true;
+    s.src = 'https://connect.getflowbox.com/flowbox.js';
+    fjs.parentNode.insertBefore(s, fjs);
+  })(document, 'flowbox-js-embed');
+</script><script>
+  window.flowbox('init', {
+    container: '#js-flowbox-flow',
+    key: 'YrnZKoeKQpOxgKJZqQSP_w',
+    locale: 'en-GB'
+  })
+</script><script>var lang_id = 1;</script>
+<script src="js/smooth-scrollbar.js"></script>
+<script src="js/glide.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/es5-shims.min.js"></script>
+<script src="js/share.js"></script>
+<!--код карты-->
+<script type="text/javascript">
+	var mapOptions = {
+		center : [62.04524421835813,129.68644949999995],
+		zoom: 11
+	}
+
+	var map = new L.map('map', mapOptions);
+	var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+	map.addLayer(layer);
+
+	var marker = new L.marker([62.03266406124629, 129.74994649999985]);
+	var marker2 = new L.marker([62.33497691674746, 129.64200499999984]);
+
+	marker.bindPopup('IT PARK').openPopup();
+	
+	marker.addTo(map);
+	marker2.addTo(map);
+
+	
+
+</script>
+<!--код карты-->
+
+
+<!--<script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(70648294, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script>
+-->
+
+</body></html>
